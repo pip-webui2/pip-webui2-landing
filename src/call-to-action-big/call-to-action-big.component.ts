@@ -1,13 +1,15 @@
 import { Component, Input, Output, EventEmitter, Renderer, ElementRef } from '@angular/core';
 
 @Component({
-    selector: 'pip-call-to-action',
-    templateUrl: './call-to-action.component.html',
-    styleUrls: ['./call-to-action.component.scss']
+    selector: 'pip-call-to-action-big',
+    templateUrl: './call-to-action-big.component.html',
+    styleUrls: ['./call-to-action-big.component.scss']
 })
 export class PipCallToActionBigComponent {
-    @Input() text: string = 'Cool to action component';
-    @Input() title: string = 'Cool title';
+    @Input() list: string[] = [];
+    @Input() title: string = null;
+    @Input() subtitle: string = null;
+    @Input() titleBig: string = null;
     @Input() button: string = 'Button';
     @Input() class: string = null;
     @Output() event = new EventEmitter();

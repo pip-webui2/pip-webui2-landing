@@ -1,13 +1,20 @@
 <div class="pip-call-action-big" [ngClass]="class">
     <div>
-        <div class="pip-title">{{title}}</div>
+        <div class="pip-title" *ngIf="title">{{title}}</div>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center-center" class="pip-content">
-            <div fxLayout="column" fxLayoutAlign="center-end" class="pip-left-content">
+            <div fxLayout="column" fxLayoutAlign="center-end" class="pip-left-content" *ngIf="list.length > 0">
                 <div class="pip-text">
-                    {{text}}
+
+                    <div *ngFor="let item of list; let i = index" fxLayout="row">
+                        <i class="material-icons pip-icon">check</i>
+                        {{item}}
+                    </div>
                 </div>
+
             </div>
-            <div fxLayout="column" fxLayoutAlign="center-start" class="pip-right-content">
+            <div fxLayout="column" fxLayoutAlign="center-start" class="pip-right-content" [ngClass]="{ 'pip-full' : !list || list.length == 0}">
+                <div class="pip-title-big" *ngIf="titleBig">{{titleBig}}</div>
+                <div class="pip-subtitle" *ngIf="subtitle">{{subtitle}}</div>
                 <div class="pip-actions">
                     <button mat-button (click)="onClick()" color="accent">
                         {{button}}
