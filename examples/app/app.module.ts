@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PipTestModule } from './pip-webui2-landing';
+import { PipTestModule, PipCallToActionModule } from './pip-webui2-landing';
 
 import { AppComponent } from './app.component';
 
@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    PipTestModule
+    PipTestModule,
+    PipCallToActionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
