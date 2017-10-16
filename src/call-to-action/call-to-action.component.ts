@@ -9,6 +9,7 @@ export class PipCallToActionComponent {
     @Input() text: string = 'Cool to action component';
     @Input() title: string = 'Cool title';
     @Input() button: string = 'Button';
+    @Input() class: string = null;
     @Output() event = new EventEmitter();
 
     public constructor(
