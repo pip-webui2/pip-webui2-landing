@@ -1,2 +1,2 @@
-export { PipCallToActionComponent } from './call-to-action.component';
-export { PipCallToActionModule } from './call-to-action.module';
+export { PipLandingCallToActionComponent } from './call-to-action.component';
+export { PipLandingCallToActionModule } from './call-to-action.module';

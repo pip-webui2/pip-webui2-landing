@@ -93,7 +93,7 @@
   $text-color: #fff;
   $bg-color: rgb(51, 51, 51);
 
-  @include generate-call-action (':host .pip-call-action', $bg-color , $text-color, $font-title, $font-title, $font-headline,  $callActionTitle);
+  @include generate-call-action (':host .pip-landing-call-action', $bg-color , $text-color, $font-title, $font-title, $font-headline,  $callActionTitle);
   
 :host {
     width: 100%;

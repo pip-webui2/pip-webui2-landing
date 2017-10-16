@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material';
 
-import { PipCallToActionComponent } from './call-to-action.component';
+import { PipLandingCallToActionComponent } from './call-to-action.component';
 
 @NgModule({
   declarations: [
-    PipCallToActionComponent
+    PipLandingCallToActionComponent
   ],
   imports: [
     FlexLayoutModule,
     MatButtonModule
   ],
   exports: [
-    PipCallToActionComponent
+    PipLandingCallToActionComponent
   ],
   providers: [],
 })
-export class PipCallToActionModule { }
+export class PipLandingCallToActionModule { }
