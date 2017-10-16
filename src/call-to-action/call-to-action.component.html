@@ -1,16 +1,17 @@
 <div class="pip-call-action">
     <div class="">
-        <div class="pip-title">СКОРЕЕ ВСЕГО, ПЕРЕД ВАМИ ТО, ЧТО ВЫ ИСКАЛИ ГОДАМИ</div>
-        <div fxLayout="row" fxLayoutAlign="center-center" class="layout-xs-column pip-content">
+        <div class="pip-title">{{title}}</div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center-center" class="pip-content">
             <div fxLayout="column" fxLayoutAlign="center-end" class="pip-left-content">
                 <div class="pip-text">
-                    Начните пользоваться системой первыми, раньше чем она появится на рынке
+                    {{text}}
                 </div>
             </div>
             <div fxLayout="column" fxLayoutAlign="center-start" class="pip-right-content">
-                <div class="pip-actions" >
-                    asas
-                   <!-- <md-button class="md-raised md-accent"> ЗАРЕГИСТРИРОВАТЬСЯ БЕСПЛАТНО</md-button> -->
+                <div class="pip-actions">
+                    <button mat-button (click)="onClick()" color="accent">
+                        {{button}}
+                    </button>
                 </div>
             </div>
         </div>
