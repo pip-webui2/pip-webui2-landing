@@ -1,0 +1,19 @@
+<div class="pip-call-action-big" [ngClass]="class">
+    <div>
+        <div class="pip-title">{{title}}</div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center-center" class="pip-content">
+            <div fxLayout="column" fxLayoutAlign="center-end" class="pip-left-content">
+                <div class="pip-text">
+                    {{text}}
+                </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center-start" class="pip-right-content">
+                <div class="pip-actions">
+                    <button mat-button (click)="onClick()" color="accent">
+                        {{button}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
