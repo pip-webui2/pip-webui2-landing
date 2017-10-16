@@ -6,11 +6,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { PipCallToActionBigComponent } from './call-to-action-big.component';
+import { PipLandingCallToActionBigComponent } from './call-to-action-big.component';
 
 @NgModule({
   declarations: [
-    PipCallToActionBigComponent
+    PipLandingCallToActionBigComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -21,8 +21,8 @@ import { PipCallToActionBigComponent } from './call-to-action-big.component';
     ReactiveFormsModule
   ],
   exports: [
-    PipCallToActionBigComponent
+    PipLandingCallToActionBigComponent
   ],
   providers: [],
 })
-export class PipCallToActionBigModule { }
+export class PipLandingCallToActionBigModule { }

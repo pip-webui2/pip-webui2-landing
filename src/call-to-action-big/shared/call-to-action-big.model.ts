@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 
-export class PipCallToActionBigButton {
+export class PipLandingCallToActionBigButton {
     public name: string;
     public click?: any = new EventEmitter();
 }

@@ -1,17 +1,17 @@
 import { Component, Input, Output, EventEmitter, Renderer, ElementRef } from '@angular/core';
-import { PipCallToActionBigButton } from './shared/call-to-action-big.model';
+import { PipLandingCallToActionBigButton } from './shared/call-to-action-big.model';
 
 @Component({
-    selector: 'pip-call-to-action-big',
+    selector: 'pip-landing-call-to-action-big',
     templateUrl: './call-to-action-big.component.html',
     styleUrls: ['./call-to-action-big.component.scss']
 })
-export class PipCallToActionBigComponent {
+export class PipLandingCallToActionBigComponent {
     @Input() list: string[] = [];
     @Input() title: string = null;
     @Input() subtitle: string = null;
     @Input() titleBig: string = null;
-    @Input() buttons: PipCallToActionBigButton[];
+    @Input() buttons: PipLandingCallToActionBigButton[];
     @Input() class: string = null;
 
     public constructor(
@@ -21,7 +21,7 @@ export class PipCallToActionBigComponent {
         renderer.setElementClass(elRef.nativeElement, 'pip-call-action-big', true);
     }
 
-    public onClick(button: PipCallToActionBigButton): void {
+    public onClick(button: PipLandingCallToActionBigButton): void {
         button.click.emit();
     }
 }
