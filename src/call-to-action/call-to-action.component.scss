@@ -64,10 +64,12 @@
         color: $textColor;
         font-weight: 400;
         line-height: 1.2em;
+        margin-bottom: 8px;
       }
   
        button {
          height: 56px;
+         width: 100%;
          color: $textColor;
        }
     }
