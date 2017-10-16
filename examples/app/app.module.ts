@@ -10,9 +10,13 @@ import { ExampleListModule } from './examples-list/examples-list.module';
 import { ActionExampleComponent } from './action/action-example.component';
 import { ActionExampleModule} from './action/action-example.module';
 
+import { InfoExampleComponent } from './info/info-example.component';
+import { InfoExampleModule} from './info/info-example.module';
+
 
 const appRoutes: Routes = [
   { path: 'action', component: ActionExampleComponent },
+  { path: 'info', component: InfoExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'action' }
 ];
 
@@ -29,6 +33,7 @@ const appRoutes: Routes = [
 
     ExampleListModule,
     ActionExampleModule,
+    InfoExampleModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
