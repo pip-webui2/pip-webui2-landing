@@ -9,18 +9,20 @@ import { PipCallToActionBigButton } from './pip-webui2-landing';
 export class AppComponent {
   title = 'app';
 
-  public list: string[] = [
-    'Структурируйте и осмысляйте свои дела',
-    'Ведите совместные проекты с коллегами',
-    'Организовывайте работу своей команды',
-    'Следите за людьми, деятельность которых вам интересна',
-    'Делись своими знаниями и наблюдениями с другими'
+
+  public list: any[] = [
+    {
+      name: 'Appbar', id: 'appbar', route: 'appbar'
+    },
+    {
+      name: 'Sidenav', id: 'sidenav', route: 'sidenav'
+    }
   ];
 
-  public buttons: PipCallToActionBigButton[] = [];
-  constructor() {
-    this.buttons.push({
-      name: 'ЗАРЕГИСТРИРОВАТЬСЯ БЕСПЛАТНО'
-    })
+  public listIndex: number = 0;
+
+  public onListItemIndexChanged(index: number) {
+    this.listIndex - index;
+    
   }
 }
