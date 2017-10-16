@@ -36,6 +36,10 @@
       .pip-full {
         width: 100%;
       }
+
+      .pip-icon {
+       margin-right: $call-action-padding-sm / 2;
+      }
   
       .pip-title {
         font: $titleFont;
