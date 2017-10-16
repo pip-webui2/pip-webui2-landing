@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { PipCallToActionComponent } from './call-to-action.component';
 
@@ -6,7 +7,9 @@ import { PipCallToActionComponent } from './call-to-action.component';
   declarations: [
     PipCallToActionComponent
   ],
-  imports: [],
+  imports: [
+    FlexLayoutModule
+  ],
   exports: [
     PipCallToActionComponent
   ],
