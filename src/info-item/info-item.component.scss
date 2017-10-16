@@ -1,0 +1,23 @@
+
+  $font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+  $font-size-title:                 20px;
+  $font-weight-title:               500;
+  $letter-spacing-title:            .005em;
+  $font-title:                      normal $font-weight-title $font-size-title $font-family;
+
+
+  $font-size-headline:              24px;
+  $font-weight-headline:            400;
+  $line-height-headline:            32px;
+  $font-headline:                   normal $font-weight-headline $font-size-headline $font-family;
+
+  $callActionTitle: normal 400 100px $font-family;
+  $text-color: #fff;
+  $bg-color: rgb(51, 51, 51);
+
+
+:host {
+    width: 100%;
+    display: block;
+}

@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatButtonModule, MatInputModule } from '@angular/material';
 
 import { InfoExampleComponent } from './info-example.component';
-import { PipTestModule} from '../pip-webui2-landing';
+import { PipTestModule, PipLandingInfoItemModule } from '../pip-webui2-landing';
 
 
 
@@ -22,7 +22,8 @@ import { PipTestModule} from '../pip-webui2-landing';
     MatButtonModule,
     MatInputModule,
     
-    PipTestModule
+    PipTestModule,
+    PipLandingInfoItemModule
 
   ],
   exports: [
