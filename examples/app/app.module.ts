@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PipTestModule, PipCallToActionModule, PipCallToActionBigModule, PipCallToActionBigComponent } from './pip-webui2-landing';
+import { PipTestModule, PipLandingCallToActionModule, PipLandingCallToActionBigModule, PipLandingCallToActionBigComponent } from './pip-webui2-landing';
 
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -28,8 +28,8 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     BrowserModule,
     PipTestModule,
-    PipCallToActionModule,
-    PipCallToActionBigModule,
+    PipLandingCallToActionModule,
+    PipLandingCallToActionBigModule,
 
     ExampleListModule,
     ActionExampleModule,

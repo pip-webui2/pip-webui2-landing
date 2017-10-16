@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PipCallToActionBigButton } from '../pip-webui2-landing';
+import { PipLandingCallToActionBigButton } from '../pip-webui2-landing';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class ActionExampleComponent {
     'Делись своими знаниями и наблюдениями с другими'
   ];
 
-  public buttons: PipCallToActionBigButton[] = [];
+  public buttons: PipLandingCallToActionBigButton[] = [];
   constructor() {
     this.buttons.push({
       name: 'ЗАРЕГИСТРИРОВАТЬСЯ БЕСПЛАТНО'
