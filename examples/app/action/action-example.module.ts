@@ -4,7 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatButtonModule, MatInputModule } from '@angular/material';
 
-import { AppBarExampleComponent } from './appbar-example.component';
+import { ActionExampleComponent } from './action-example.component';
 import { PipTestModule, PipCallToActionModule, PipCallToActionBigModule, PipCallToActionBigComponent } from '../pip-webui2-landing';
 
 
@@ -12,7 +12,7 @@ import { PipTestModule, PipCallToActionModule, PipCallToActionBigModule, PipCall
 
 @NgModule({
   declarations: [
-    AppBarExampleComponent
+    ActionExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +26,9 @@ import { PipTestModule, PipCallToActionModule, PipCallToActionBigModule, PipCall
 
   ],
   exports: [
-    AppBarExampleComponent
+    ActionExampleComponent
   ],
   providers: [
   ],
 })
-export class AppbarExampleModule { }
+export class ActionExampleModule { }

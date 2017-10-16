@@ -7,15 +7,17 @@ import { PipCallToActionBigButton } from './pip-webui2-landing';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-
 
   public list: any[] = [
     {
-      name: 'Appbar', id: 'appbar', route: 'appbar'
+      name: 'Call to action',
+      id: 'action', 
+      route: 'action'
     },
     {
-      name: 'Sidenav', id: 'sidenav', route: 'sidenav'
+      name: 'Info block',
+      id: 'info', 
+      route: 'info'
     }
   ];
 
@@ -23,6 +25,6 @@ export class AppComponent {
 
   public onListItemIndexChanged(index: number) {
     this.listIndex - index;
-    
+
   }
 }

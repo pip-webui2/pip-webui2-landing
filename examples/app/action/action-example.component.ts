@@ -3,11 +3,11 @@ import { PipCallToActionBigButton } from '../pip-webui2-landing';
 
 
 @Component({
-  selector: 'appbar-example',
-  templateUrl: './appbar-example.component.html',
-  styleUrls: ['./appbar-example.component.scss']
+  selector: 'action-example',
+  templateUrl: './action-example.component.html',
+  styleUrls: ['./action-example.component.scss']
 })
-export class AppBarExampleComponent {
+export class ActionExampleComponent {
  
   public list: string[] = [
     'Структурируйте и осмысляйте свои дела',

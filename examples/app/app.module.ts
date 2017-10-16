@@ -7,13 +7,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { Routes, RouterModule} from '@angular/router';
 import { ExampleListModule } from './examples-list/examples-list.module';
-import { AppBarExampleComponent } from './appbar/appbar-example.component';
-import { AppbarExampleModule} from './appbar/appbar-example.module';
+import { ActionExampleComponent } from './action/action-example.component';
+import { ActionExampleModule} from './action/action-example.module';
 
 
 const appRoutes: Routes = [
-  { path: 'appbar', component: AppBarExampleComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'appbar' }
+  { path: 'action', component: ActionExampleComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'action' }
 ];
 
 @NgModule({
@@ -28,7 +28,7 @@ const appRoutes: Routes = [
     PipCallToActionBigModule,
 
     ExampleListModule,
-    AppbarExampleModule,
+    ActionExampleModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
