@@ -1,0 +1,64 @@
+
+  $font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+  $font-size-subhead1:               16px;
+  $font-weight-subhead1:             400;
+  $letter-spacing-subhead1:          .01em;
+  $line-height-subhead1:             24px;
+  $font-subhead1:                    normal $font-weight-subhead1 $font-size-subhead1 $font-family;
+  
+
+  $font-size-title:                 20px;
+  $font-weight-title:               500;
+  $letter-spacing-title:            .005em;
+  $font-title:                      normal $font-weight-title $font-size-title $font-family;  
+
+
+  @mixin generate-info-block ($name, $textFont, $titleFont ) {
+    #{$name} {
+      text-align: center;
+  
+      img {
+        height: 160px;
+        width: 200px; 
+      }
+
+      .pip-content {
+        padding: 16px;
+        //width: 30%;
+        @media (max-width: 768px) {
+          //width: calc(100% - 32px);
+        }
+      }
+  
+      .pip-title {
+        text-transform: uppercase;
+        font: $titleFont;
+        margin-bottom: 24px;
+      }
+      .pip-title-bg {
+        background-color: rgba(0,0,0,.26);
+      }
+  
+      .pip-text {
+        font: $textFont;
+        line-height: 22px;
+      }
+
+    }
+  }
+  
+  @include generate-info-block ('.pip-info-block', $font-subhead1, $font-title);
+
+:host {
+    width: 100%;
+    display: block;
+}
+
+.bm16 {
+  margin-bottom: 16px;
+}
+
+.tm16 {
+  margin-top: 16px; 
+}

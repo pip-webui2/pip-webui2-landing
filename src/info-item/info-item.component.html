@@ -7,7 +7,7 @@
     </div>
 
     <div class="pip-content" *ngIf="imgPosition == 'left' || imgPosition == 'rigth'" fxLayout="row" fxLayout.xs="column" 
-    fxLayoutAlign="start-center">
+        fxLayoutAlign="start-center">
         <img [src]="imgPath" *ngIf="imgPath && imgPosition == 'left'" [ngClass]="imgClass" class="bm16">
         <div fxLayout="column" fxLayoutAlign="center-start">
 
