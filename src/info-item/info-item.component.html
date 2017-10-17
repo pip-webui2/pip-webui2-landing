@@ -5,4 +5,15 @@
         <div class="pip-text" *ngIf="text">{{text}}</div>
         <img [src]="imgPath" *ngIf="imgPath && imgPosition == 'bottom'" [ngClass]="imgClass" class="tm16">
     </div>
+
+    <div class="pip-content" *ngIf="imgPosition == 'left' || imgPosition == 'rigth'" fxLayout="row" fxLayout.xs="column" 
+    fxLayoutAlign="start-center">
+        <img [src]="imgPath" *ngIf="imgPath && imgPosition == 'left'" [ngClass]="imgClass" class="bm16">
+        <div fxLayout="column" fxLayoutAlign="center-start">
+
+            <div class="pip-title" *ngIf="title" [ngClass]="titleClass">{{title}}</div>
+            <div class="pip-text" *ngIf="text">{{text}}</div>
+        </div>
+        <img [src]="imgPath" *ngIf="imgPath && imgPosition == 'rigth'" [ngClass]="imgClass" class="tm16">
+    </div>
 </div>
