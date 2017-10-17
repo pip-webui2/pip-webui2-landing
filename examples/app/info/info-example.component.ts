@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class InfoExampleComponent {
 
+  public img: string = '/assets/u500.png';
+  public title: string = 'Общая картина';
+  public text: string = 'Теперь есть возможность увидеть полную картину жизни и работы в одном месте.';
   constructor() {
    
   }

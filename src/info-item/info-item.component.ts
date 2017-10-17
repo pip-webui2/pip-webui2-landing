@@ -6,20 +6,17 @@ import { Component, Input, Output, EventEmitter, Renderer, ElementRef } from '@a
     styleUrls: ['./info-item.component.scss']
 })
 export class PipLandingInfoItemComponent {
-    @Input() text: string = 'Cool to action component';
-    @Input() title: string = 'Cool title';
-    @Input() button: string = 'Button';
-    @Input() class: string = null;
-    @Output() event = new EventEmitter();
+    @Input() text: string;
+    @Input() imgPath: string;
+    @Input() title: string;
+    @Input() titleClass: string = '';
+    @Input() imgClass: string = '';
+    @Input() imgPosition: string = 'top';
 
     public constructor(
         private renderer: Renderer,
         private elRef: ElementRef
     ) {
         renderer.setElementClass(elRef.nativeElement, 'pip-landing-info-item', true);
-    }
-
-    public onClick(): void {
-        this.event.emit();
     }
 }
