@@ -4,5 +4,6 @@ export class PipLandingInfoBlockItem {
     public title: string;
     public titleClass?: string = '';
     public imgClass?: string = '';
+    public textClass?: string = '';
     public imgPosition: string = 'top';
 }

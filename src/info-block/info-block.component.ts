@@ -9,6 +9,7 @@ import { PipLandingInfoBlockItem } from './shared/info-block.model';
 })
 export class PipLandingInfoBlockComponent {
     @Input()  items: PipLandingInfoBlockItem[] = [];
+    @Input() type: string = 'img';
 
     public constructor(
         private renderer: Renderer,

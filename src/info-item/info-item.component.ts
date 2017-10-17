@@ -10,8 +10,10 @@ export class PipLandingInfoItemComponent {
     @Input() imgPath: string;
     @Input() title: string;
     @Input() titleClass: string = '';
+    @Input() textClass: string = '';
     @Input() imgClass: string = '';
     @Input() imgPosition: string = 'top';
+    @Input() type: string = 'img';
 
     public constructor(
         private renderer: Renderer,

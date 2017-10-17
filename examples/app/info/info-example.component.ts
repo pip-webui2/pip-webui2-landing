@@ -14,6 +14,7 @@ export class InfoExampleComponent {
   public text: string = 'Теперь есть возможность увидеть полную картину жизни и работы в одном месте.';
   public items: PipLandingInfoBlockItem[] = [];
   public items2: PipLandingInfoBlockItem[] = [];
+  public items3: PipLandingInfoBlockItem[] = [];
   constructor() {
     let item: PipLandingInfoBlockItem = new PipLandingInfoBlockItem();
     item.title = this.title;
@@ -53,6 +54,32 @@ export class InfoExampleComponent {
 
     this.items2.push(item4);
     this.items2.push(item5);
+
+
+    let item6: PipLandingInfoBlockItem = new PipLandingInfoBlockItem();
+    item6.title = "ГИБКАЯ СИСТЕМА НАСТРОЕК ДОСТУПА";
+    item6.titleClass = 'pip-orange';
+    item6.imgClass = 'img-5';
+    item6.text = "К каждой записи, цели, проекту и новости вы можете присвоить свой уровень приватности, а также давать людям возможность управлять ими.";
+
+    this.items3.push(item6);
+    let item7: PipLandingInfoBlockItem = new PipLandingInfoBlockItem();
+    item7.title = "ПОЛНАЯ БЕЗОПАСТНОСТЬ ДАННЫХ";
+    item7.titleClass = 'pip-green';
+    item7.imgClass = 'img-5';
+    item7.text = "Все ваши данные находятся в полной безопасности. Вы сами определяете настройки приватности и решаете, кто и что сможет увидеть.";
+
+
+    let item8: PipLandingInfoBlockItem = new PipLandingInfoBlockItem();
+    item8.title = "ЛЕГКО ПОДСТРАИВАЕТСЯ ПОД ВАШ СТИЛЬ";
+    item8.titleClass = 'pip-green';
+    item8.imgClass = 'img-5';
+    item8.text = "Вы легко подстроите систему под привычный вам способ ведения дел. Если Вы уже используете какую-то систему, то сможете импортировать";
+
+
+    this.items3.push(item7);
+    this.items3.push(item8);
+
 
 
   }
