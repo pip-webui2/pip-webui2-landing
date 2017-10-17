@@ -20,8 +20,12 @@ export class InfoExampleComponent {
     item.text = this.text;
     item.imgPath = this.img;
     this.items.push(item);
-    this.items.push(item);
-    this.items.push(item);
+    let item2: PipLandingInfoBlockItem = new PipLandingInfoBlockItem();
+    item2.title = this.title;
+    item2.titleClass = 'pip-green';
+    item2.text = this.text;
+    item2.imgPath = null;
+    this.items.push(item2);
     this.items.push(item);
   }
 }

@@ -1,3 +1,6 @@
-<div class="pip-info-block">
-    <pip-landing-info-item *ngFor="let item of items" [imgPath]="item.imgPath" [title]="item.title" [text]="item.text" [titleClass]="item.titleClass" [imgPosition]="item.imgPosition"></pip-landing-info-item>
+
+<div class="pip-info-block" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+    <pip-landing-info-item *ngFor="let item of items" [imgPath]="item.imgPath" 
+    fxLayout="column" fxLayoutAlign="center center"
+        [title]="item.title" [text]="item.text" [titleClass]="item.titleClass" [imgPosition]="item.imgPosition"></pip-landing-info-item>
 </div>

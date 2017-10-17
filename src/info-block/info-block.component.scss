@@ -17,6 +17,8 @@
   @mixin generate-info-block ($name, $textFont, $titleFont ) {
     #{$name} {
       text-align: center;
+      background-color: #eee;
+      color: rgba(0,0,0,0.87);
 
       pip-landing-info-item {
         padding: 16px;
