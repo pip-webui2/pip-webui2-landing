@@ -17,32 +17,14 @@
   @mixin generate-info-block ($name, $textFont, $titleFont ) {
     #{$name} {
       text-align: center;
-  
-      img {
-        height: 160px;
-        width: 200px; 
-      }
 
-      .pip-content {
+      pip-landing-info-item {
         padding: 16px;
-        //width: 30%;
+        display: inline-block;
+        width: 30%;
         @media (max-width: 768px) {
-          //width: calc(100% - 32px);
+          width: calc(100% - 32px);
         }
-      }
-  
-      .pip-title {
-        text-transform: uppercase;
-        font: $titleFont;
-        margin-bottom: 24px;
-      }
-      .pip-title-bg {
-        background-color: rgba(0,0,0,.26);
-      }
-  
-      .pip-text {
-        font: $textFont;
-        line-height: 22px;
       }
 
     }
@@ -53,12 +35,4 @@
 :host {
     width: 100%;
     display: block;
-}
-
-.bm16 {
-  margin-bottom: 16px;
-}
-
-.tm16 {
-  margin-top: 16px; 
 }

@@ -1,17 +1,14 @@
 import { Component, Input, Output, EventEmitter, Renderer, ElementRef } from '@angular/core';
 
+import { PipLandingInfoBlockItem } from './shared/info-block.model';
+
 @Component({
     selector: 'pip-landing-info-block',
     templateUrl: './info-block.component.html',
     styleUrls: ['./info-block.component.scss']
 })
 export class PipLandingInfoBlockComponent {
-    @Input() text: string;
-    @Input() imgPath: string;
-    @Input() title: string;
-    @Input() titleClass: string = '';
-    @Input() imgClass: string = '';
-    @Input() imgPosition: string = 'top';
+    @Input()  items: PipLandingInfoBlockItem[] = [];
 
     public constructor(
         private renderer: Renderer,

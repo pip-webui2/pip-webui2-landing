@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';  
 
 import { PipLandingInfoBlockComponent } from './info-block.component';
+import { PipLandingInfoItemModule } from '../info-item/info-item.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { PipLandingInfoBlockComponent } from './info-block.component';
     FlexLayoutModule,
     MatButtonModule,
     FormsModule, ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+
+    PipLandingInfoItemModule
   ],
   exports: [
     PipLandingInfoBlockComponent
