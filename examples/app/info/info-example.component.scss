@@ -1,11 +1,21 @@
 .example-content {
     padding: 16px;
 }
-pip-info-block {
+pip-landing-info-block {
     margin-bottom: 8px
 }
 
 
 .pip-sample-item {
     width: 340px;
+}
+
+::ng-deep .img-1 {
+    width: 160px !important;
+    height: 160px !important;
+}
+
+::ng-deep .img-2 {
+    height:  160px !important;
+    width: 230px !important;
 }
