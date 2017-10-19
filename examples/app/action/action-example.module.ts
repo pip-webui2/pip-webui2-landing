@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatButtonModule, MatInputModule } from '@angular/material';
 
 import { ActionExampleComponent } from './action-example.component';
-import { PipTestModule, PipLandingCallToActionModule, PipLandingCallToActionBigModule, PipLandingCallToActionBigComponent } from '../pip-webui2-landing';
+import { PipLandingCallToActionModule, PipLandingCallToActionBigModule, PipLandingCallToActionBigComponent } from '../pip-webui2-landing';
 
 
 
@@ -22,8 +22,8 @@ import { PipTestModule, PipLandingCallToActionModule, PipLandingCallToActionBigM
     MatButtonModule,
     MatInputModule,
     
-    PipTestModule, PipLandingCallToActionModule, PipLandingCallToActionBigModule, 
-
+    PipLandingCallToActionModule,
+    PipLandingCallToActionBigModule, 
   ],
   exports: [
     ActionExampleComponent
