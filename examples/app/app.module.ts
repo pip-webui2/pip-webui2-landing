@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CustomBreakPointsProvider } from './custom-breakpoints';
+import { MatToolbarModule, MatSelectModule, MatSidenavModule, MatIconModule,MatButtonModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { PipThemesModule } from 'pip-webui2-themes';
 import { PipLandingCallToActionModule, PipLandingCallToActionBigModule, PipLandingCallToActionBigComponent } from './pip-webui2-landing';
 
 import { AppComponent } from './app.component';
@@ -27,6 +32,19 @@ const appRoutes: Routes = [
   imports: [
     FlexLayoutModule,
     BrowserModule,
+
+    RouterModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule,
+    
+    PipThemesModule,
+
     PipLandingCallToActionModule,
     PipLandingCallToActionBigModule,
 
@@ -36,7 +54,7 @@ const appRoutes: Routes = [
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
-  providers: [],
+  providers: [CustomBreakPointsProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
