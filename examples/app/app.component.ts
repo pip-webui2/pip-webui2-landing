@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { ObservableMedia, MediaChange } from "@angular/flex-layout";
 import { Router } from "@angular/router";
-import { PipThemesService } from 'pip-webui2-themes';
+import { PipThemesService, Theme } from 'pip-webui2-themes';
 import { ExmapleListItem } from "./examples-list/shared/examples-list.model";
 
 @Component({
@@ -12,12 +12,28 @@ import { ExmapleListItem } from "./examples-list/shared/examples-list.model";
 })
 export class AppComponent {
   public listIndex: number = 0;
-  public themes: string[];
-  public theme: string;
+  public themes: Theme[];
+  public theme: Theme;
   public activeMediaQuery: boolean;
   public mode: string;
-  public app: string = 'Buttons';
+  public app: string = 'Landing';
   public url: string;
+  public themesLocalNames: any = {
+    "candy-theme": 'Candy',
+    "unicorn-dark-theme": 'Unicorn Dark',
+    "pip-blue-theme": 'Blue',
+    "pip-grey-theme": 'Grey',
+    "pip-pink-theme": 'Pink',
+    "pip-green-theme": 'Green',
+    "pip-navy-theme": 'Navy',
+    "pip-amber-theme": 'Amber',
+    "pip-orange-theme": 'Orange',
+    "pip-dark-theme": 'Dark',
+    "pip-black-theme": 'Black',
+    "bootbarn-warm-theme": 'Bootbarn Warm',
+    "bootbarn-cool-theme": 'Bootbarn Cool',
+    "bootbarn-mono-theme": 'Bootbarn Mono'
+  }
 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
