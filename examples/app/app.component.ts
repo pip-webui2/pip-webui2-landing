@@ -34,6 +34,18 @@ export class AppComponent {
     "bootbarn-cool-theme": 'Bootbarn Cool',
     "bootbarn-mono-theme": 'Bootbarn Mono'
   }
+  public list: any[] = [
+    {
+      name: 'Call to action',
+      id: 'action', 
+      route: 'action'
+    },
+    {
+      name: 'Info block',
+      id: 'info', 
+      route: 'info'
+    }
+  ];
 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
@@ -53,28 +65,22 @@ export class AppComponent {
 
     router.events.subscribe((url:any) => {
     
-      if (url.url && url.url != this.url) {
-        this.url = url.url;
-        this.listIndex = this.list.findIndex((item) => {
-            return "/" + item.route == this.url;
-        })
+      let index: number;
+      console.log(url);
+      if (!url.url) {
+        this.listIndex = 0;
+        return;
       }
+      if (url.url != this.url) {
+        this.url = url.url;
+        index = this.list.findIndex((item) => {
+            return "/" + item.route == this.url;
+        });
+        this.listIndex = index == -1 ? 0: index; 
+      } 
     });
 
   }
-
-  public list: any[] = [
-    {
-      name: 'Call to action',
-      id: 'action', 
-      route: 'action'
-    },
-    {
-      name: 'Info block',
-      id: 'info', 
-      route: 'info'
-    }
-  ];
 
   public onListItemIndexChanged(index: number) {
     
