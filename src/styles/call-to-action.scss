@@ -11,7 +11,7 @@
         width: 100%;
       }
   
-      @media(max-width: 768px) {
+      @media(max-width: 980px) {
         padding: $call-action-padding-sm;
         &> div {
           width: 100%;
@@ -20,7 +20,7 @@
   
       .pip-left-content{
         width: 70%;
-        @media (max-width: 768px) {
+        @media (max-width: 980px) {
           width: 100%;
         }
       }
@@ -28,7 +28,7 @@
       .pip-right-content {
         width: 30%;
         min-width: 280px;
-        @media (max-width: 768px) {
+        @media (max-width: 980px) {
           width: 100%;
         }
       }
