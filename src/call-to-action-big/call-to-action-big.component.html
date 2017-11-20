@@ -1,7 +1,7 @@
 <div class="pip-landing-call-action-big" [ngClass]="class">
     <div>
         <div class="pip-title" *ngIf="title">{{title}}</div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center-center" class="pip-content">
+        <div fxLayout="row"  fxLayoutAlign="center-center" class="pip-content">
             <div fxLayout="column" fxLayoutAlign="center-end" class="pip-left-content" *ngIf="list.length > 0" [ngClass]="{'pip-full' : !((buttons && buttons.length > 0) || !titleBig || !subtitle)}">
                 <div *ngFor="let item of list; let i = index" fxLayout="row" class="pip-text">
                     <i class="material-icons pip-icon">check</i>

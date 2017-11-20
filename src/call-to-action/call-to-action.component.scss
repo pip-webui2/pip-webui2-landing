@@ -21,5 +21,12 @@
   
 :host {
     width: 100%;
+    max-width: 980px;
     display: block;
+}
+
+@media(max-width: 980px) {
+  .pip-content {
+    flex-direction: column !important;
+  }
 }

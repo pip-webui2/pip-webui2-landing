@@ -23,3 +23,9 @@
     width: 100%;
     display: block;
 }
+
+@media(max-width: 980px) {
+  .pip-content {
+    flex-direction: column !important;
+  }
+}
