@@ -30,3 +30,84 @@
     flex-direction: column !important;
   }
 }
+
+
+@import '~@angular/material/theming';
+@import "../../node_modules/pip-webui2-themes/src/styles.scss";
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+@mixin call-to-action-mixin($theme) {
+    // Extract whichever individual palettes you need from the theme.
+
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+  
+    :host /deep/ .pip-landing-call-action  {
+      background-color: mat-color($foreground, text) !important;
+      color: mat-color($background, card) !important;
+      .pip-title {
+        color:  mat-color($background, card) !important;
+      }
+      md-icon {
+        color: mat-color($background, card) !important;
+      }
+
+      .pip-text{
+        color: mat-color($background, card) !important;
+      }
+  
+       button {
+        color: mat-color($background, card) !important; 
+       }
+  
+    }
+}
+  .unicorn-dark-theme { 
+    @include call-to-action-mixin($dark-theme); 
+  }
+  .candy-theme { 
+    @include call-to-action-mixin($candy-app-theme); 
+  }
+
+  .pip-blue-theme{
+    @include call-to-action-mixin($pip-blue-theme);
+  }
+  .pip-grey-theme{
+    @include call-to-action-mixin($pip-grey-theme);
+  }
+  .pip-navy-theme{
+    @include call-to-action-mixin($pip-navy-theme);
+  } 
+  .pip-amber-theme{
+    @include call-to-action-mixin($pip-amber-theme);
+  }
+  .pip-green-theme{
+    @include call-to-action-mixin($pip-green-theme);
+  }
+  .pip-orange-theme{
+    @include call-to-action-mixin($pip-orange-theme);
+  }
+  .pip-pink-theme{
+    @include call-to-action-mixin($pip-pink-theme);
+  }
+  .pip-dark-theme{
+    @include call-to-action-mixin($pip-dark-theme);
+  }
+  .pip-black-theme{
+    @include call-to-action-mixin($pip-black-theme);
+  }
+  .bootbarn-warm-theme{
+    @include call-to-action-mixin($bootbarn-warm-theme);
+  }
+  .bootbarn-cool-theme{    
+    @include call-to-action-mixin($bootbarn-cool-theme);
+  }
+  .bootbarn-mono-theme{
+    @include call-to-action-mixin($bootbarn-mono-theme);
+  }
