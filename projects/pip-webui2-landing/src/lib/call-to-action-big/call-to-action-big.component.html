@@ -1,0 +1,29 @@
+<div class="pip-landing-call-action-big" [ngClass]="class">
+    <div>
+        <div class="pip-title" *ngIf="title">{{title}}</div>
+        <div fxLayout="row" fxLayoutAlign="center-center" class="pip-content">
+            <div fxLayout="column" fxLayoutAlign="center-end" class="pip-left-content" *ngIf="list.length > 0"
+                 [ngClass]="{'pip-full' : !((buttons && buttons.length > 0) || !titleBig || !subtitle)}">
+                <div *ngFor="let item of list; let i = index" fxLayout="row" class="pip-text">
+                    <i class="material-icons pip-icon">check</i>
+                    <div class="">
+                        {{item}}
+                    </div>
+
+                </div>
+
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center-start" class="pip-right-content" [ngClass]="{'pip-full' : !list || list.length == 0}"
+                 *ngIf="(buttons && buttons.length > 0) || !titleBig || !subtitle">
+                <div class="pip-title-big" *ngIf="titleBig">{{titleBig}}</div>
+                <div class="pip-subtitle" *ngIf="subtitle">{{subtitle}}</div>
+                <div class="pip-actions" *ngIf="buttons && buttons.length > 0">
+
+                    <button mat-button (click)="onClick(button)" color="accent" *ngFor="let button of buttons; let i = index">
+                        {{button.name}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

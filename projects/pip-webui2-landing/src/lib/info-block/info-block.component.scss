@@ -1,0 +1,116 @@
+$font-family: Roboto,
+'Helvetica Neue',
+sans-serif;
+$font-size-subhead1 : 16px;
+$font-weight-subhead1 : 400;
+$letter-spacing-subhead1 : .01em;
+$line-height-subhead1 : 24px;
+$font-subhead1 : normal $font-weight-subhead1 $font-size-subhead1 $font-family;
+$font-size-title : 20px;
+$font-weight-title : 500;
+$letter-spacing-title : .005em;
+$font-title : normal $font-weight-title $font-size-title $font-family;
+@mixin generate-info-block ($name, $textFont, $titleFont) {
+    #{$name} {
+        text-align: center;
+        background-color: #eee;
+        color: rgba(0, 0, 0, 0.87);
+        padding: 16px;
+        pip-landing-info-item {
+            //padding: 16px;
+            display: inline-block;
+            width: 30%;
+            @media (max-width: 768px) {
+                width: calc(100% - 32px);
+            }
+        }
+    }
+}
+
+@include generate-info-block ('.pip-info-block', $font-subhead1, $font-title);
+:host {
+    width: 100%;
+    display: block;
+}
+
+@media(max-width: 980px) {
+    .pip-info-block {
+        flex-direction: column !important;
+        pip-landing-info-item {
+            width: 100% !important;
+        }
+    }
+}
+
+@import '~@angular/material/theming';
+@import "~pip-webui2-themes/styles.scss";
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+@mixin info-block-mixin($theme) {
+    // Extract whichever individual palettes you need from the theme.
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    :host /deep/ .pip-info-block {
+        color: mat-color($foreground, text) !important;
+        background: mat-color($background, card);
+    }
+}
+
+.unicorn-dark-theme {
+    @include info-block-mixin($dark-theme);
+}
+
+.candy-theme {
+    @include info-block-mixin($candy-app-theme);
+}
+
+.pip-blue-theme {
+    @include info-block-mixin($pip-blue-theme);
+}
+
+.pip-grey-theme {
+    @include info-block-mixin($pip-grey-theme);
+}
+
+.pip-navy-theme {
+    @include info-block-mixin($pip-navy-theme);
+}
+
+.pip-amber-theme {
+    @include info-block-mixin($pip-amber-theme);
+}
+
+.pip-green-theme {
+    @include info-block-mixin($pip-green-theme);
+}
+
+.pip-orange-theme {
+    @include info-block-mixin($pip-orange-theme);
+}
+
+.pip-pink-theme {
+    @include info-block-mixin($pip-pink-theme);
+}
+
+.pip-dark-theme {
+    @include info-block-mixin($pip-dark-theme);
+}
+
+.pip-black-theme {
+    @include info-block-mixin($pip-black-theme);
+}
+
+.bootbarn-warm-theme {
+    @include info-block-mixin($bootbarn-warm-theme);
+}
+
+.bootbarn-cool-theme {
+    @include info-block-mixin($bootbarn-cool-theme);
+}
+
+.bootbarn-mono-theme {
+    @include info-block-mixin($bootbarn-mono-theme);
+}
